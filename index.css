@@ -316,3 +316,20 @@ img {
     margin-top: 5px;
     text-align: center;
 }
+
+.card-produto {
+    vertical-align: top; /* evita que um card encoste no outro */
+}
+
+.card-aviso {
+    margin-left: 30px; /* espaço lateral */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    background: #f0f0f0;
+    color: black;
+    width: 200px;   /* garante tamanho igual ao dos outros */
+    height: 150px;  /* garante tamanho igual ao dos outros */
+}
