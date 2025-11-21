@@ -46,7 +46,6 @@
     background: rgba(255,255,0,0.08);  /* leve brilho */
     border: 2px solid rgba(255,255,0,0.3);
 }
-}
 
 .nav-links a:hover {
     background: #ffff00;            /* botão amarelo */
@@ -515,4 +514,24 @@ body {
     box-shadow: 0 0 12px rgba(255,255,0,0.6);
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;   /* empilha logo + botões */
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;   /* botões um abaixo do outro */
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: 80%;               /* botões maiores no mobile */
+        text-align: center;
+        font-size: 16px;          /* leve redução */
+        padding: 12px 0;
+    }
+}
 
