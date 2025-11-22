@@ -534,4 +534,13 @@ body {
         padding: 12px 0;
     }
 }
+.menu-lateral a i {
+    margin-right: 8px;
+    transition: 0.3s ease;
+}
 
+.menu-lateral a:hover i {
+    transform: translateY(-4px) scale(1.1);
+    color: #ffff00;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
