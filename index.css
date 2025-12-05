@@ -18,20 +18,17 @@
     padding: 12px 20px;
 }
 
-
 .logo {
     color: yellow;
-    font-size: 20px;
+    font-size: 16px; /* era 20px */
     font-weight: bold;
 }
 
 
-.nav-links {
-   list-style: none;
-    display: flex;
-    gap: 25px;  /* mais espaçamento entre eles */
-    margin: 0;
-    padding: 0;
+.nav-links a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 14px; /* era 16px */
 }
 
 
@@ -93,7 +90,7 @@
 
 .hero h1 {
     font-family: 'Montserrat', 'Poppins', sans-serif;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -102,7 +99,7 @@
 
 .destaque {
     color: #ffff00;
-    font-size: 6rem;
+    font-size: 4rem;
     text-shadow: 0 0 20px rgba(255,255,0,0.5);
 }
 
@@ -111,7 +108,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 5.5rem;
+    font-size: 4rem;
     font-weight: 900;
     text-shadow: none;
 }
@@ -544,4 +541,29 @@ footer a {
 footer a:hover {
     transform: scale(1.15);
     color: #ffff00; /* amarelo neon */
+}
+
+/* --- FORÇAR MENU MENOR --- */
+.logo {
+    font-size: 16px !important;   /* diminui a logo */
+}
+
+.nav-links a {
+    font-size: 14px !important;   /* diminui os links */
+}
+/* --- FORÇAR TÍTULOS MENORES NO HERO --- */
+.hero h1 {
+    font-size: 3rem !important;    /* antes era 5rem */
+}
+
+.destaque {
+    font-size: 3.5rem !important;  /* antes era 6rem */
+}
+
+.gradient-text {
+    font-size: 3.5rem !important;  /* antes era 5.5rem */
+}
+
+.subtitulo {
+    font-size: 1.2rem !important;  /* texto abaixo do título */
 }
