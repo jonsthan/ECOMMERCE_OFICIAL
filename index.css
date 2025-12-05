@@ -27,7 +27,7 @@
 
 
 .nav-links {
-   list-style: none;
+    list-style: none;
     display: flex;
     gap: 25px;  /* mais espaçamento entre eles */
     margin: 0;
@@ -361,7 +361,7 @@
 }
 
 .menu-lateral li {
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 .menu-lateral a {
@@ -531,7 +531,7 @@ body {
         width: 80%;               /* botões maiores no mobile */
         text-align: center;
         font-size: 16px;          /* leve redução */
-        padding: 12px 0;
+        padding: 13px 0;
     }
 }
 
