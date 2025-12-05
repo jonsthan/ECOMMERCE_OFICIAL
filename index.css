@@ -537,3 +537,11 @@ body {
     }
 }
 
+footer a {
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+footer a:hover {
+    transform: scale(1.15);
+    color: #ffff00; /* amarelo neon */
+}
