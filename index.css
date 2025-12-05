@@ -27,22 +27,31 @@
 
 
 .nav-links {
-    list-style: none;
+   list-style: none;
     display: flex;
-    gap: 20px;         
+    gap: 25px;  /* mais espaçamento entre eles */
     margin: 0;
     padding: 0;
 }
 
 
 .nav-links a {
-    color: yellow;
+     color: #ffff00;                 /* amarelo neon */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;            /* botões arredondados */
+    transition: all 0.3s ease;
+    background: rgba(255,255,0,0.08);  /* leve brilho */
+    border: 2px solid rgba(255,255,0,0.3);
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    background: #ffff00;            /* botão amarelo */
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(255,255,0,0.6);
 }
 /***************  FIM BARRA DE NAVEGAÇÃO  ****************/
 
@@ -364,6 +373,9 @@
 /* ÁREA DOS PRODUTOS */
 .produtos {
     width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;     /* espaço horizontal e vertical */
 }
 
 .card-produto {
@@ -464,9 +476,62 @@ img {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     background: #f0f0f0;
     color: black;
     width: 200px;   /* garante tamanho igual ao dos outros */
     height: 150px;  /* garante tamanho igual ao dos outros */
+      
 }
+/* Fonte moderna global */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffff00;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,0,0.08);
+    border: 2px solid rgba(255,255,0,0.3);
+}
+
+.nav-links a:hover {
+    background: #ffff00;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(255,255,0,0.6);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;   /* empilha logo + botões */
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;   /* botões um abaixo do outro */
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: 80%;               /* botões maiores no mobile */
+        text-align: center;
+        font-size: 16px;          /* leve redução */
+        padding: 12px 0;
+    }
+}
+
