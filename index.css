@@ -487,8 +487,8 @@ footer a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: yellow;
-  color: black;
+  background: black;
+  color: yellow;
   padding: 10px 15px;
   border-radius: 8px;
   text-decoration: none;
@@ -501,8 +501,8 @@ footer a:hover {
   position: fixed;
   bottom: 80px; /* fica exatamente acima do outro */
   right: 20px;
-  background: yellow;
-  color: black;
+  background: black;
+  color: yellow;
   padding: 12px 18px;
   border-radius: 8px;
   text-decoration: none;
