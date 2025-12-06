@@ -135,4 +135,27 @@
         margin: 10px 0;
     }
 }
+footer {
+    background-color: #252525;   /* Alinhado com o restante do site */
+    color: #ffff00;               /* Texto amarelo neon */
+    text-align: center;        
+    padding: 20px 10px;        
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #ffff00;               /* Amarelo neon */
+    text-decoration: none;     
+    margin: 0 5px;              
+}
+
+footer a:hover {
+    color: white;               /* Alterado para um hover em branco */
+    text-decoration: underline; 
+}
+
 
