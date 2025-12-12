@@ -320,6 +320,7 @@ img {
 /* =============================
    BOTÕES FIXOS (TOPO E CARRINHO)
    ============================= */
+/* BOTÕES FLUTUANTES AJUSTADOS (DESKTOP + MOBILE) */
 .btn-topo,
 .btn-carrinho {
     position: fixed;
@@ -327,19 +328,69 @@ img {
     background: yellow;
     color: black;
     padding: 12px 18px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    z-index: 1000;
+    z-index: 1200;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: 0.2s ease-in-out;
+}
+
+/* Posições no desktop */
+.btn-carrinho {
+    bottom: 100px;
 }
 
 .btn-topo {
-    bottom: 20px;
+    bottom: 40px;
 }
 
-.btn-carrinho {
-    bottom: 80px;
+/* Hover no desktop */
+.btn-topo:hover,
+.btn-carrinho:hover {
+    transform: translateY(-5px);
 }
+
+/* ----------- MODO MOBILE (ATÉ 768px) ----------- */
+@media (max-width: 768px) {
+
+    .btn-topo,
+    .btn-carrinho {
+        right: 12px;
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+
+    .btn-carrinho {
+        bottom: 85px;
+    }
+
+    .btn-topo {
+        bottom: 30px;
+    }
+}
+
+/* ----------- MODO MOBILE PEQUENO (ATÉ 480px) ----------- */
+@media (max-width: 480px) {
+
+    .btn-topo,
+    .btn-carrinho {
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 7px;
+    }
+
+    .btn-carrinho {
+        bottom: 75px;
+    }
+
+    .btn-topo {
+        bottom: 25px;
+    }
+}
+
 
 /* =============================
    FOOTER FIXO
