@@ -6,8 +6,10 @@
   background-size: 100% 2px; /* 2px = espessura da linha */
   padding-bottom: 4px; /* distância do texto até a linha */
 }
-/***************  BARRA DE NAVEGAÇÃO  ****************/
 
+/* =============================
+   NAVBAR / MENU SUPERIOR
+   ============================= */
 .navbar {
   background-color: #252525;
   display: flex;
@@ -48,11 +50,10 @@
   transform: translateY(-3px);
   box-shadow: 0 0 12px rgba(255, 255, 0, 0.6);
 }
-/***************  FIM BARRA DE NAVEGAÇÃO  ****************/
 
-/***************  FIM ÁREA DO CONTEÚDO  ****************/
-
-/* ===== HERO – VERSÃO CINZA ESCURO + TEXTO AMARELO (CoreTech Edition) ===== */
+/* =============================
+   HERO (TÍTULO PRINCIPAL)
+   ============================= */
 .hero {
   display: flex;
   align-items: center;
@@ -66,53 +67,24 @@
   text-align: center;
 }
 
-/* Fundo sutil com textura (opcional, mas fica lindo) */
 .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(255, 255, 0, 0.03) 0%,
-    transparent 70%
-  );
-  opacity: 0.4;
-  animation: pulse 15s infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,255,0,0.05), transparent);
 }
 
 .hero-content {
-  max-width: 900px;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
-  font-family: "Montserrat", "Poppins", sans-serif;
-  font-size: 5rem;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  animation: fadeUp 1s ease forwards;
+    font-size: 3rem;
+    font-weight: 900;
 }
 
-.destaque {
-  color: #ffff00;
-  font-size: 6rem;
-  text-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
-}
-
+.destaque,
 .gradient-text {
   background: linear-gradient(90deg, #ffd700, #ffff00, #ffea00);
   -webkit-background-clip: text;
@@ -141,26 +113,15 @@
   opacity: 0;
 }
 
-/* Botão principal AMARELO NEON */
 .btn-principal {
-  background: #ffff00;
-  color: #000;
-  padding: 18px 40px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-decoration: none;
-  transition: all 0.4s;
-  box-shadow: 0 10px 30px rgba(255, 255, 0, 0.4);
+    background: yellow;
+    color: black;
+    padding: 14px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.btn-principal:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(255, 255, 0, 0.6);
-  background: #ffea00;
-}
-
-/* Botão secundário com borda amarela */
 .btn-secundario {
   background: transparent;
   color: #ffff00;
@@ -221,140 +182,42 @@
   border-bottom: 3px solid #ffff00;
 }
 
-.promo-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.promo-header h3 {
-  font-size: 1.8rem;
-  color: #ffff00;
-  font-weight: 900;
-  margin: 0;
-  text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
-}
-
-.contador-mini {
-  background: #ffff00;
-  color: #000;
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1.3rem;
-  min-width: 100px;
-}
-
-.produtos-mini {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
 .mini-card {
-  position: relative;
-  width: 280px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(255, 255, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-.mini-card:hover {
-  transform: translateY(-8px);
+    width: 180px;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(255,255,0,0.2);
 }
 
 .mini-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
 }
 
-.desconto {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ff0000;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-.img_Oferta {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  background-color: rgb(#2d2d2d);
-  display: block;
-}
-.info {
-  background: #111;
-  padding: 12px;
-}
-
-.info .nome {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #ffff00;
-  font-weight: bold;
-}
-
-.info .preco {
-  margin: 5px 0 0;
-  font-size: 1.4rem;
-  color: white;
-  font-weight: bold;
-}
-
-.btn-ver-tudo {
-  display: inline-block;
-  background: #ffff00;
-  color: #000;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-ver-tudo:hover {
-  background: #ffea00;
-  transform: scale(1.05);
-}
-/* area produtos e lateral bar*/
-
-/* CONTAINER GERAL */
+/* =============================
+   MENU LATERAL
+   ============================= */
 .container {
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  gap: 20px; /* O espaço entre menu e produtos */
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
-/* MENU LATERAL */
-/* MENU LATERAL – ESTILO BASE */
+
 .menu-lateral {
-  width: 20%;
-  background: #252525; /* fundo escuro */
-  padding: 20px 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* opcional: fica mais bonito */
+    width: 20%;
+    background: #252525;
+    padding: 20px;
+    border-radius: 12px;
 }
 
-/* Título "Categorias" */
 .menu-lateral h3 {
-  color: yellow;
-  margin: 0 0 20px 0;
-  font-size: 18px;
-  text-align: center;
+    color: yellow;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Links do menu */
 .menu-lateral a {
   color: yellow; /* texto amarelo */
   text-decoration: none;
@@ -364,9 +227,15 @@
   padding: 12px 10px;
   border-radius: 6px;
   transition: all 0.25s ease; /* animação suave */
+    display: block;
+    color: yellow;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    transition: 0.2s;
 }
 
-/* HOVER – só o texto cresce + fundo levemente mais claro */
 .menu-lateral a:hover {
   transform: scale(1.12); /* cresce 12% */
   background-color: rgba(
@@ -485,8 +354,57 @@ footer a {
 footer a:hover {
   color: white;
   text-decoration: underline;
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.05);
 }
-/***************  FIM FOOTER ****************/
+
+/* =============================
+   GRID DE PRODUTOS
+   ============================= */
+   /* ============================
+   PRODUTOS — NOVO DESIGN PREMIUM
+   ============================ */
+
+.produtos {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+/* CARD elegante e moderno */
+.card-produto {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.08);
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hover premium com leve levantamento */
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+    border-color: rgba(255, 255, 0, 0.4); /* detalhe amarelo elegante */
+}
+
+/* Imagem destacada com bordas suaves */
+.card-produto img {
+    width: 180px;
+    height: 180px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.25s;
+}
+
+/* Zoom leve na imagem */
+.card-produto:hover img {
+    transform: scale(1.05);
+}
 
 /* Botão Voltar ao Topo (você já tem) */
 .btn-topo {
@@ -502,7 +420,11 @@ footer a:hover {
   z-index: 999;
 }
 
-/* Botão Ver Carrinho – 100% igual, só que 60px mais acima */
+
+/* =============================
+   BOTÕES FIXOS (TOPO E CARRINHO)
+   ============================= */
+.btn-topo,
 .btn-carrinho {
   position: fixed;
   bottom: 80px; /* fica exatamente acima do outro */
@@ -614,4 +536,73 @@ body {
   transform: translateY(-4px) scale(1.1);
   color: #ffff00;
   text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
+    position: fixed;
+    right: 20px;
+    background: yellow;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.btn-topo {
+    bottom: 20px;
+}
+
+.btn-carrinho {
+    bottom: 80px;
+}
+
+/* =============================
+   FOOTER FIXO
+   ============================= */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0c0303;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    z-index: 999;
+}
+
+/* =============================
+   RESPONSIVIDADE MOBILE
+   ============================= */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .produtos {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .destaque,
+    .gradient-text {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
 }

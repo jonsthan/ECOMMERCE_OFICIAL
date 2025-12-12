@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>CoreTech</title>
@@ -23,39 +23,39 @@
     </ul>
 </nav>
 
+<body>
 
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo">CoreTech</div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Promoções</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>
-            <span class="destaque">CoreTech</span><br>
-            O seu próximo <span class="gradient-text">Notebook</span> ou <span class="gradient-text">Celular</span><br>
-            está aqui!
-        </h1>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à <span class="destaque">CoreTech</span></h1>
+            <p class="subtitulo">
+                Tecnologia com os melhores preços, qualidade e envio rápido.
+            </p>
 
-        <p class="subtitulo">
-            As melhores marcas · Preços imbatíveis · Entrega rápida em todo Brasil
-        </p>
-
-        <div class="cta-buttons">
-            <a href="#produtos" class="btn-principal">Ver Ofertas do Dia</a>
-            <a href="#promocoes" class="btn-secundario">Promoções Relâmpago</a>
+            <div class="cta-buttons">
+                <a href="#" class="btn-principal">Ver Ofertas</a>
+                <a href="#" class="btn-secundario">Falar no WhatsApp</a>
+            </div>
         </div>
+    </section>
 
-        <div class="destaques-rapidos">
-            <div class="destaque-item">Frete Grátis acima de R$1500</div>
-            <div class="destaque-item">Parcelamento em até 18x</div>
-            <div class="destaque-item">Garantia estendida de 3 anos</div>
+    <!-- ============ PROMOÇÃO COMPACTA ============ -->
+    <section class="promo-compacta">
+        <div class="promo-header">
+            <h3>🔥 Promoções Relâmpago</h3>
         </div>
-    </div>
-</section>
-<section class="promo-compacta">
-    <div class="promo-header">
-        <h3>OFERTA RELÂMPAGO</h3>
-        <div class="contador-mini" id="contador-mini">
-            <span id="minutos">45</span>:<span id="segundos">19</span>
-        </div>
-    </div>
 
     <div class="produtos-mini">
         <div class="mini-card">
@@ -73,22 +73,30 @@
             <div class="info">
                 <p class="nome">iPhone 15 Pro</p>
                 <p class="preco">R$ 6.199,90</p>
+        <div class="produtos-mini">
+
+            <div class="mini-card">
+                <img src="https://via.placeholder.com/300" alt="Promoção 1">
+                <div class="info">
+                    <p class="nome">Produto X</p>
+                    <p class="preco">R$ 199,90</p>
+                </div>
             </div>
+
+            <div class="mini-card">
+                <img src="https://via.placeholder.com/300" alt="Promoção 2">
+                <div class="info">
+                    <p class="nome">Produto Y</p>
+                    <p class="preco">R$ 149,90</p>
+                </div>
+            </div>
+
         </div>
 
-        <div class="mini-card">
-            <div class="desconto">-50%</div>
-            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300" alt="Galaxy">
-            <div class="info">
-                <p class="nome">Galaxy S24 Ultra</p>
-                <p class="preco">R$ 5.999,90</p>
-            </div>
-        </div>
-    </div>
+        <a href="#" class="btn-ver-tudo">Ver tudo</a>
+    </section>
 
-    <a href="#produtos" class="btn-ver-tudo">VER TODAS AS OFERTAS →</a>
-</section>
-
+    <!-- ============ CONTAINER (MENU + PRODUTOS) ============ -->
     <div class="container">
     
     <div class="menu-lateral">
@@ -140,19 +148,65 @@
 
 </div>
 
+        <!-- MENU LATERAL -->
+        <aside class="menu-lateral">
+            <h3>Categorias</h3>
+            <a href="#">Placas de Vídeo</a>
+            <a href="#">Processadores</a>
+            <a href="#">Memórias RAM</a>
+            <a href="#">SSDs</a>
+            <a href="#">Periféricos</a>
+            <a href="#">Notebooks</a>
+        </aside>
 
+        <!-- ================= PRODUTOS (VERSÃO PREMIUM) =============== -->
+        <section class="produtos">
+
+            <div class="card-produto">
+                <span class="selo-promocao">-20%</span>
+                <img src="https://via.placeholder.com/300" alt="">
+                <p class="descricao-produto">Placa de Vídeo RTX 3060</p>
+                <p class="preco-produto">R$ 1.899,90</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/300" alt="">
+                <p class="descricao-produto">Processador Ryzen 5 5600X</p>
+                <p class="preco-produto">R$ 799,90</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="card-produto">
+                <img src="https://via.placeholder.com/300" alt="">
+                <p class="descricao-produto">Memória RAM 8GB DDR4</p>
+                <p class="preco-produto">R$ 129,90</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </div>
+
+            <div class="card-produto">
+                <span class="selo-promocao">-15%</span>
+                <img src="https://via.placeholder.com/300" alt="">
+                <p class="descricao-produto">Headset Gamer RGB</p>
+                <p class="preco-produto">R$ 169,90</p>
+                <a href="#" class="btn-comprar">Comprar</a>
+            </div>
+
+        </section>
 
     </div>
 
-</div>
+    <!-- ============ BOTÕES FLUTUANTES ============ -->
+    <a href="#" class="btn-topo">Topo</a>
+    <a href="#" class="btn-carrinho">Carrinho</a>
 
-
+    <!-- ============ FOOTER ============ -->
     <footer>
-        <p>&copy; 2025 Minha Empresa. Todos os direitos reservados.</p>
+        <p>© 2025 CoreTech Store — Todos os direitos reservados.</p>
         <p>
-            <a href="#privacidade">Política de Privacidade</a> |
-            <a href="#contato">Contato</a>
-            <a href="contato.html">Página de Contato</a> |
+            <a href="#">Termos</a> | 
+            <a href="#">Privacidade</a> | 
+            <a href="#">Contato</a>
         </p>
     </footer>
 
@@ -168,6 +222,17 @@
     <a href="#inicio" class="btn-amarelo btn-topo">
         Voltar ao topo
     </a>
+    <!-- ============ SCRIPT DO BOTÃO VOLTAR AO TOPO ============ -->
+    <script>
+        const btnTopo = document.querySelector(".btn-topo");
+        btnTopo.addEventListener("click", function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 
 </div>
 </body>
