@@ -2,10 +2,26 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreTech Store</title>
-    <link rel="stylesheet" href="index.css">
+    <title>CoreTech</title>
+    <link rel=stylesheet href=index.css>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<body>
+
+
+
+<nav class=navbar>
+    <div class="logo">CoreTech</div>
+
+    <ul class=nav-links>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#login">Login</a></li>
+    </ul>
+</nav>
 
 <body>
 
@@ -54,16 +70,23 @@
             </div>
         </div>
 
-        <!-- PRODUTO 2 -->
+    <div class="produtos-mini">
         <div class="mini-card">
-            <span class="desconto">-35%</span>
-            <img src="https://via.placeholder.com/300" alt="Mouse Gamer">
+            <div class="desconto">-42%</div>
+            <img src="Predator.jpg" class="img_Oferta">
             <div class="info">
-                <p class="nome">Mouse Gamer 7200 DPI</p>
-                <p class="preco-antigo">R$ 119,90</p>
-                <p class="preco">R$ 79,90</p>
+                <p class="nome">Predator X1</p>
+                <p class="preco">R$ 4.999,90</p>
             </div>
         </div>
+
+        <div class="mini-card">
+            <div class="desconto">-35%</div>
+            <img src="Iphone.jpg" class="img_Oferta">
+            <div class="info">
+                <p class="nome">iPhone 15 Pro</p>
+                <p class="preco">R$ 6.199,90</p>
+        <div class="produtos-mini">
 
         <!-- PRODUTO 3 -->
         <div class="mini-card">
@@ -139,6 +162,55 @@
 
     <!-- ============ CONTAINER (MENU + PRODUTOS) ============ -->
     <div class="container">
+    
+    <div class="menu-lateral">
+        <h3>Categorias</h3>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-laptop"></i>Notebooks</a></li>
+            <li><a href="#"><i class="fa-solid fa-mobile-screen"></i>Celulares</a></li>
+            <li><a href="#"><i class="fa-solid fa-headphones"></i>Acessórios</a></li>
+            <li><a href="#"><i class="fa-solid fa-tags"></i> Promoções</a></li>
+            <li><a href="#"><i class="fa-solid fa-star"></i> Destaques</a></li>
+            <li><a href="#"><i class="fa-solid fa-boxes-stacked"></i> Todos os produtos</a></li>
+        </ul>
+        </div>
+  <main class="area-principal" id="produtos">
+            
+   <h1 class="titulo-produtos">Produtos</h1>
+
+    <section class="grade-produtos">
+
+        <div class="card-produto">
+            <img src="notebook.jpg" class="img-produto">
+            <p class="descricao-produto">Notebook rápido para estudos.</p>
+            <strong>R$ 3.500,00</strong>
+        </div>
+        <div class="card-produto">
+            <img src="produto2.jpg" class="img-produto">
+            <p class="descricao-produto">Smartphone com câmera 4k.</p>
+            <strong>R$ 2.000,00</strong>
+        </div>
+        <div class="card-produto">
+            <img src="produto3.jpg" class="img-produto">
+            <p class="descricao-produto">Smartwatch esportivo.</p>
+            <strong>R$ 800,00</strong>
+        </div>
+
+        <div class="card-produto">
+            <img src="produto4.jpg" class="img-produto">
+            <p class="descricao-produto">Tablet para design.</p>
+            <strong>R$ 2.500,00</strong>
+         </div>
+
+            </section>
+   <!-- <div class="card-produto card-aviso">
+        <p>Mais produtos e ofertas em breve...</p>-->
+       <div class="bt_LDdireito">
+  <a href="#produtos" class="btn-menor">Mais produtos →</a>
+
+    </div>
+
+</div>
 
         <!-- MENU LATERAL -->
         <aside class="menu-lateral">
@@ -202,6 +274,18 @@
         </p>
     </footer>
 
+
+<div class="container-flutuante">
+
+    <a href="#carrinho" class="btn-amarelo btn-carrinho">
+        <svg class="icone-carrinho" viewBox="0 0 24 24" width="24" height="24" fill="yellow">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.76 1.38-.19 3.06.92 3.06h12V15H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+        </svg>
+        Ver Carrinho
+    </a>
+    <a href="#inicio" class="btn-amarelo btn-topo">
+        Voltar ao topo
+    </a>
     <!-- ============ SCRIPT DO BOTÃO VOLTAR AO TOPO ============ -->
     <script>
         const btnTopo = document.querySelector(".btn-topo");
@@ -214,5 +298,6 @@
         });
     </script>
 
+</div>
 </body>
 </html>

@@ -1,62 +1,56 @@
-/* =============================
-   RESET E CONFIGURAÇÕES GERAIS
-   ============================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #fff;
-    color: #000;
-    padding-bottom: 140px; /* espaço para o footer fixo */
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.conteudo h1 {
+  text-decoration: none; /* remove o padrão */
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 100% 2px; /* 2px = espessura da linha */
+  padding-bottom: 4px; /* distância do texto até a linha */
 }
 
 /* =============================
    NAVBAR / MENU SUPERIOR
    ============================= */
 .navbar {
-    background-color: #252525;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 13px 20px;
+  background-color: #252525;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
 }
 
 
 
 .logo {
-    color: yellow;
-    font-size: 16px;
-    font-weight: bold;
+  color: yellow;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 25px; /* mais espaçamento entre eles */
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-    color: yellow;
-    font-size: 14px;
-    text-decoration: none;
-    transition: 0.2s;
+  color: #ffff00; /* amarelo neon */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 50px; /* botões arredondados */
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 0, 0.08); /* leve brilho */
+  border: 2px solid rgba(255, 255, 0, 0.3);
 }
 
 .nav-links a:hover {
-    background: #fffa00;
-    color: #000;
-    transform: translateY(-3px);
-    box-shadow: 0 0 12px rgba(255,255,0,0.6);
+  background: #ffff00; /* botão amarelo */
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(255, 255, 0, 0.6);
 }
 
 /***************  FIM BARRA DE NAVEGAÇÃO  ****************/
@@ -67,15 +61,16 @@ img {
    HERO (TÍTULO PRINCIPAL)
    ============================= */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 10%;
-    background: linear-gradient(135deg, #1e1e1e, #2d2d2d, #1a1a1a);
-    color: #ffff00;
-    min-height: 80vh;
-    text-align: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d, #1a1a1a);
+  color: #ffff00; /* texto amarelo neon */
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+  text-align: center;
 }
 
 .hero::before {
@@ -97,20 +92,31 @@ img {
 
 .destaque,
 .gradient-text {
-    font-size: 3.2rem;
+  background: linear-gradient(90deg, #ffd700, #ffff00, #ffea00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 5.5rem;
+  font-weight: 900;
+  text-shadow: none;
 }
 
 .subtitulo {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-top: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  color: #ffffff;
+  animation: fadeUp 1s ease 0.3s forwards;
+  opacity: 0;
 }
 
 .cta-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 50px;
+  animation: fadeUp 1s ease 0.6s forwards;
+  opacity: 0;
 }
 
 .btn-principal {
@@ -133,24 +139,63 @@ img {
 
 /* Botão secundário com borda amarela */
 .btn-secundario {
-    border: 2px solid yellow;
-    color: yellow;
-    padding: 14px 28px;
-    border-radius: 40px;
-    text-decoration: none;
+  background: transparent;
+  color: #ffff00;
+  border: 3px solid #ffff00;
+  padding: 16px 38px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.4s;
 }
 
-/* =============================
-   PROMOÇÃO COMPACTA
-   ============================= */
+.btn-secundario:hover {
+  background: #ffff00;
+  color: #000;
+  transform: translateY(-5px);
+}
+
+.destaques-rapidos {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 1s ease 0.9s forwards;
+  opacity: 0;
+}
+
+.destaque-item {
+  background: rgba(255, 255, 0, 0.1);
+  color: #ffff00;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***************  FIM ÁREA DO CONTEÚDO  ****************/
+/*promoção*/
+/* ===== PROMOÇÃO COMPACTA ===== */
 .promo-compacta {
-    background: linear-gradient(90deg, #000, #1a1a1a);
-    padding: 30px 10%;
-    text-align: center;
-    color: white;
-    margin: 40px 0;
-    border-top: 3px solid #ffff00;
-    border-bottom: 3px solid #ffff00;
+  background: linear-gradient(90deg, #000, #1a1a1a);
+  padding: 30px 10%;
+  text-align: center;
+  color: white;
+  margin: 40px 0;
+  border-top: 3px solid #ffff00;
+  border-bottom: 3px solid #ffff00;
 }
 
 .mini-card {
@@ -241,6 +286,14 @@ img {
 }
 
 .menu-lateral a {
+  color: yellow; /* texto amarelo */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: block; /* importante para o hover funcionar direito */
+  padding: 12px 10px;
+  border-radius: 6px;
+  transition: all 0.25s ease; /* animação suave */
     display: block;
     color: yellow;
     text-decoration: none;
@@ -251,6 +304,123 @@ img {
 }
 
 .menu-lateral a:hover {
+  transform: scale(1.12); /* cresce 12% */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* fundo sutil ao passar o mouse */
+  color: #ffff00; /* amarelo mais vivo (opcional) */
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-lateral li {
+  margin: 10px 0;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* ÁREA DOS PRODUTOS */
+/* Estiliza a seção geral */
+.area-principal {
+  /* Atenção ao nome: area-principal */
+  width: 80%;
+  padding: 20px;
+}
+
+/* Estiliza só o Título */
+.titulo-produtos {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* O Container que segura os cards (A Vitrine) */
+.grade-produtos {
+  display: flex; /* Transforma em Flexbox */
+  flex-wrap: wrap; /* Permite quebrar linha se não couber */
+  justify-content: center; /* Centraliza os cards na tela */
+  gap: 20px; /* Espaço entre os cards */
+}
+
+/* O Card Individual (Arrumado) */
+.card-produto {
+  width: 160px; /* Largura fixa */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  /* Configuração interna do card */
+  display: flex;
+  flex-direction: column; /* IMPORTANTE: Foto em cima, texto embaixo */
+  align-items: center; /* Centraliza tudo horizontalmente */
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para ficar bonito */
+}
+
+.img-produto {
+  width: 100%;
+  height: 100%; /* Altura fixa para a foto */
+  object-fit: cover; /* Foto não estica */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+/* Botão de Mais produtos*/
+.bt_LDdireito .btn-menor {
+  display: inline-block;
+  background: #ffff00;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(255, 255, 0, 0.4);
+}
+
+.bt_LDdireito .btn-menor:hover {
+  background: #ffea00;
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(255, 255, 0, 0.6);
+}
+.bt_LDdireito {
+  text-align: right;
+}
+/* fim area produtos e lateral bar*/
+
+/***************  FOOTER  ****************/
+footer {
+  background-color: #0c0303;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
     background: rgba(255,255,255,0.1);
     transform: scale(1.05);
 }
@@ -303,12 +473,18 @@ img {
     transform: scale(1.05);
 }
 
-/* Texto do produto */
-.descricao-produto {
-    margin-top: 12px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #333;
+/* Botão Voltar ao Topo (você já tem) */
+.btn-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: yellow;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
 }
 
 
@@ -317,6 +493,117 @@ img {
    ============================= */
 .btn-topo,
 .btn-carrinho {
+  position: fixed;
+  bottom: 80px; /* fica exatamente acima do outro */
+  right: 20px;
+  background: black;
+  color: yellow;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.icone-carrinho {
+  margin-bottom: -4px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.descricao-produto {
+  font-size: 14px;
+  color: black;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.card-produto {
+  vertical-align: top; /* evita que um card encoste no outro */
+}
+
+.card-aviso {
+  margin-left: 30px; /* espaço lateral */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  background: #f0f0f0;
+  color: black;
+  width: 200px; /* garante tamanho igual ao dos outros */
+  height: 150px; /* garante tamanho igual ao dos outros */
+}
+/* Fonte moderna global */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffff00;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 0, 0.08);
+  border: 2px solid rgba(255, 255, 0, 0.3);
+}
+
+.nav-links a:hover {
+  background: #ffff00;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(255, 255, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* empilha logo + botões */
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* botões um abaixo do outro */
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-links a {
+    width: 80%; /* botões maiores no mobile */
+    text-align: center;
+    font-size: 16px; /* leve redução */
+    padding: 12px 0;
+  }
+}
+.menu-lateral a i {
+  margin-right: 8px;
+  transition: 0.3s ease;
+}
+
+.menu-lateral a:hover i {
+  transform: translateY(-4px) scale(1.1);
+  color: #ffff00;
+  text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
     position: fixed;
     right: 20px;
     background: yellow;
