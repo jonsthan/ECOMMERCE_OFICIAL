@@ -223,31 +223,36 @@ img {
     padding: 20px;
 }
 
+/* MENU LATERAL (AJUSTADO) */
 .menu-lateral {
-    width: 21%;
+    width: 16%;
     background: #252525;
-    padding: 20px 15px;
+    padding: 25px 15px;
     border-radius: 13px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-
-
-/* Título "Categorias" */
 .menu-lateral h3 {
     color: yellow;
-    text-align: center;
     margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 .menu-lateral a {
     display: block;
+    width: 100%;
     color: yellow;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 0;
     margin-bottom: 8px;
     border-radius: 6px;
     transition: 0.2s;
+    text-align: center;
 }
 
 .menu-lateral a:hover {
