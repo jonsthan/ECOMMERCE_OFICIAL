@@ -325,12 +325,14 @@
 /* MENU LATERAL */
 /* MENU LATERAL – ESTILO BASE */
 .menu-lateral {
-    width: 20%;
-    background: #252525;          /* fundo escuro */
+    width: 21%;
+    background: #252525;
     padding: 20px 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);   /* opcional: fica mais bonito */
+    border-radius: 13px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+
 
 /* Título "Categorias" */
 .menu-lateral h3 {
