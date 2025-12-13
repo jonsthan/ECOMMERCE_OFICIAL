@@ -189,13 +189,13 @@
 /*promoção*/
 /* ===== PROMOÇÃO COMPACTA ===== */
 .promo-compacta {
-  background: linear-gradient(90deg, #000, #1a1a1a);
-  padding: 30px 10%;
-  text-align: center;
-  color: white;
-  margin: 40px 0;
-  border-top: 3px solid #ffff00;
-  border-bottom: 3px solid #ffff00;
+    background: linear-gradient(90deg, #2f2f2f, #3a3a3a, #2f2f2f);
+    padding: 30px 10%;
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+    border-top: 3px solid #ffff00;
+    border-bottom: 3px solid #ffff00;
 }
 
 .mini-card {
