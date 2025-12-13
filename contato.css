@@ -141,14 +141,9 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-footer p {
-    margin: 8px 0;
-}
-
+footer p,
 footer a {
-    color: #ffff00;               /* Amarelo neon */
-    text-decoration: none;     
-    margin: 0 5px;              
+    margin: 6px 0;
 }
 
 footer a:hover {
