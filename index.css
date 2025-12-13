@@ -189,13 +189,13 @@
 /*promoção*/
 /* ===== PROMOÇÃO COMPACTA ===== */
 .promo-compacta {
-  background: linear-gradient(90deg, #000, #1a1a1a);
-  padding: 30px 10%;
-  text-align: center;
-  color: white;
-  margin: 40px 0;
-  border-top: 3px solid #ffff00;
-  border-bottom: 3px solid #ffff00;
+    background: linear-gradient(90deg, #2f2f2f, #3a3a3a, #2f2f2f);
+    padding: 30px 10%;
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+    border-top: 3px solid #ffff00;
+    border-bottom: 3px solid #ffff00;
 }
 
 .mini-card {
@@ -268,67 +268,98 @@
     padding: 20px;
 }
 
+/* =============================
+   MENU DE CATEGORIAS – PREMIUM
+   ============================= */
+
 .menu-lateral {
-    width: 21%;
-    background: #252525;
-    padding: 20px 15px;
-    border-radius: 13px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-
-
-/* Título "Categorias" */
-.menu-lateral h3 {
-    color: yellow;
+    width: 22%; /* 🔼 maior que antes */
+    background: linear-gradient(180deg, #1e1e1e, #252525);
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.menu-lateral a {
-  color: yellow; /* texto amarelo */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  display: block; /* importante para o hover funcionar direito */
-  padding: 12px 10px;
-  border-radius: 6px;
-  transition: all 0.25s ease; /* animação suave */
+/* Título */
+.menu-lateral h3 {
+    color: #ffff00;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+.menu-lateral h3::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: yellow;
     display: block;
-    color: yellow;
-    text-decoration: none;
-    padding: 10px;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    transition: 0.2s;
+    margin: 10px auto 0;
+    border-radius: 5px;
 }
 
-.menu-lateral a:hover {
-  transform: scale(1.12); /* cresce 12% */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* fundo sutil ao passar o mouse */
-  color: #ffff00; /* amarelo mais vivo (opcional) */
-}
-
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-lateral li {
-  margin: 10px 0;
-}
-
+/* Links das categorias */
 .menu-lateral a {
-  text-decoration: none;
-  color: yellow;
-  font-weight: bold;
-  font-size: 20px;
+    width: 100%;
+    color: #ffff00;
+    text-decoration: none;
+    padding: 14px 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,0,0.15);
 }
+
+/* Hover bonito */
+.menu-lateral a:hover {
+    background: #ffff00;
+    color: #000;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(255,255,0,0.35);
+}
+
+/* =============================
+   RESPONSIVO – TABLET
+   ============================= */
+@media (max-width: 1024px) {
+    .menu-lateral {
+        width: 30%;
+    }
+}
+
+/* =============================
+   RESPONSIVO – MOBILE
+   ============================= */
+@media (max-width: 768px) {
+
+    .menu-lateral {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 25px 15px;
+    }
+
+    .menu-lateral h3 {
+        font-size: 1.3rem;
+    }
+
+    .menu-lateral a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
 
 /* ÁREA DOS PRODUTOS */
 /* Estiliza a seção geral */
@@ -491,6 +522,7 @@ footer a:hover {
 /* =============================
    BOTÕES FIXOS (TOPO E CARRINHO)
    ============================= */
+/* BOTÕES FLUTUANTES AJUSTADOS (DESKTOP + MOBILE) */
 .btn-topo,
 .btn-carrinho {
   position: fixed;
@@ -609,19 +641,69 @@ body {
     background: yellow;
     color: black;
     padding: 12px 18px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    z-index: 1000;
+    z-index: 1200;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: 0.2s ease-in-out;
+}
+
+/* Posições no desktop */
+.btn-carrinho {
+    bottom: 100px;
 }
 
 .btn-topo {
-    bottom: 20px;
+    bottom: 40px;
 }
 
-.btn-carrinho {
-    bottom: 80px;
+/* Hover no desktop */
+.btn-topo:hover,
+.btn-carrinho:hover {
+    transform: translateY(-5px);
 }
+
+/* ----------- MODO MOBILE (ATÉ 768px) ----------- */
+@media (max-width: 768px) {
+
+    .btn-topo,
+    .btn-carrinho {
+        right: 12px;
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+
+    .btn-carrinho {
+        bottom: 85px;
+    }
+
+    .btn-topo {
+        bottom: 30px;
+    }
+}
+
+/* ----------- MODO MOBILE PEQUENO (ATÉ 480px) ----------- */
+@media (max-width: 480px) {
+
+    .btn-topo,
+    .btn-carrinho {
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 7px;
+    }
+
+    .btn-carrinho {
+        bottom: 75px;
+    }
+
+    .btn-topo {
+        bottom: 25px;
+    }
+}
+
 
 /* =============================
    FOOTER FIXO
