@@ -92,6 +92,15 @@
     transform: translateY(-3px);
 }
 
+.form-contato button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.6);
+}
+
+.form-contato button:active {
+    transform: scale(0.96);
+}
+
 /* Informações de Contato */
 .info-contato {
     margin-top: 40px;
