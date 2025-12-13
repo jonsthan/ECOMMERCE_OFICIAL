@@ -25,3 +25,41 @@
   margin-bottom: 30px;
   font-size: 2rem;
 }
+/* Estilo dos inputs */
+.input-box {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+  outline: none;
+  box-sizing: border-box; /* Garante que o padding não quebre o layout */
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #ffff00;
+  box-shadow: 0 0 8px rgba(255, 255, 0, 0.3);
+}
+
+/* Botão de Login Esticado */
+.btn-login {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
