@@ -101,6 +101,16 @@
     transform: scale(0.96);
 }
 
+.form-contato input:invalid,
+.form-contato textarea:invalid {
+    border-color: #ff4444;
+}
+
+.form-contato input:valid,
+.form-contato textarea:valid {
+    border-color: #00ff88;
+}
+
 /* Informações de Contato */
 .info-contato {
     margin-top: 40px;
