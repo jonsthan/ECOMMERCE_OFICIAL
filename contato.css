@@ -58,19 +58,17 @@
 .form-contato {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
+    gap: 20px; /* antes 15px */
+    max-width: 520px;
     margin: 0 auto;
     text-align: left;
     background: #2d2d2d;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 30px; /* antes 20px */
+    border-radius: 10px;
 }
 
 .form-contato label {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #ffff00;
+    margin-bottom: -10px;
 }
 
 .form-contato input, .form-contato textarea {
