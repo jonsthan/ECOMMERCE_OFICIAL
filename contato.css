@@ -40,19 +40,15 @@
     box-shadow: 0 0 12px rgba(255,255,0,0.6);
 }
 
-/* Estilos para a seção de contato */
 .contato {
-    padding: 50px 10%;
-    background-color: #1e1e1e;
+    padding: 60px 10%;
+    background: linear-gradient(180deg, #1e1e1e, #141414);
     color: #fff;
-    text-align: center;
 }
 
 .contato h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #ffff00;
-    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .form-contato {
