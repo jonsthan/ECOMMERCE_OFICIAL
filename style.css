@@ -1,0 +1,27 @@
+/* Adicione ao final do style.css */
+
+/* Fundo exclusivo da página de login para centralizar tudo */
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0c0303, #1a1a1a);
+}
+
+.login-container {
+  background: #111;
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 0, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.1);
+  text-align: center;
+  color: white;
+}
+
+.login-container h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
