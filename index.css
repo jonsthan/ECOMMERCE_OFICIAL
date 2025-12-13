@@ -268,72 +268,98 @@
     padding: 20px;
 }
 
-/* MENU LATERAL (AJUSTADO) */
-.menu-lateral {
-    width: 16%;
-    background: #252525;
-    padding: 25px 15px;
-    border-radius: 13px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* =============================
+   MENU DE CATEGORIAS – PREMIUM
+   ============================= */
 
+.menu-lateral {
+    width: 22%; /* 🔼 maior que antes */
+    background: linear-gradient(180deg, #1e1e1e, #252525);
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+/* Título */
 .menu-lateral h3 {
-    color: yellow;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    color: #ffff00;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
 }
 
-.menu-lateral a {
-  color: yellow; /* texto amarelo */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  display: block; /* importante para o hover funcionar direito */
-  padding: 12px 10px;
-  border-radius: 6px;
-  transition: all 0.25s ease; /* animação suave */
+/* Linha decorativa abaixo do título */
+.menu-lateral h3::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: yellow;
     display: block;
-    width: 100%;
-    color: yellow;
-    text-decoration: none;
-    padding: 10px 0;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    transition: 0.2s;
-    text-align: center;
+    margin: 10px auto 0;
+    border-radius: 5px;
 }
 
-.menu-lateral a:hover {
-  transform: scale(1.12); /* cresce 12% */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* fundo sutil ao passar o mouse */
-  color: #ffff00; /* amarelo mais vivo (opcional) */
-}
-
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-lateral li {
-  margin: 10px 0;
-}
-
+/* Links das categorias */
 .menu-lateral a {
-  text-decoration: none;
-  color: yellow;
-  font-weight: bold;
-  font-size: 20px;
+    width: 100%;
+    color: #ffff00;
+    text-decoration: none;
+    padding: 14px 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,0,0.15);
 }
+
+/* Hover bonito */
+.menu-lateral a:hover {
+    background: #ffff00;
+    color: #000;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(255,255,0,0.35);
+}
+
+/* =============================
+   RESPONSIVO – TABLET
+   ============================= */
+@media (max-width: 1024px) {
+    .menu-lateral {
+        width: 30%;
+    }
+}
+
+/* =============================
+   RESPONSIVO – MOBILE
+   ============================= */
+@media (max-width: 768px) {
+
+    .menu-lateral {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 25px 15px;
+    }
+
+    .menu-lateral h3 {
+        font-size: 1.3rem;
+    }
+
+    .menu-lateral a {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
 
 /* ÁREA DOS PRODUTOS */
 /* Estiliza a seção geral */
