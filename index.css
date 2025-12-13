@@ -711,3 +711,13 @@ footer a:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
+
+@keyframes pulseNeon {
+  0% { box-shadow: 0 0 8px #ffff00; }
+  50% { box-shadow: 0 0 18px #ffff00; }
+  100% { box-shadow: 0 0 8px #ffff00; }
+}
+
+.btn-topo {
+  animation: pulseNeon 2s infinite;
+}
