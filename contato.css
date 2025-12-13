@@ -1,0 +1,161 @@
+/* Barra de Navegação */
+.navbar {
+    background-color: #252525;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.logo {
+    color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffff00;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,0,0.08);
+    border: 2px solid rgba(255,255,0,0.3);
+}
+
+.nav-links a:hover {
+    background: #ffff00;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(255,255,0,0.6);
+}
+
+/* Estilos para a seção de contato */
+.contato {
+    padding: 50px 10%;
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffff00;
+    font-weight: 900;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-contato label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffff00;
+}
+
+.form-contato input, .form-contato textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-contato button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #ffff00;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-contato button:hover {
+    background-color: #ffea00;
+    transform: translateY(-3px);
+}
+
+/* Informações de Contato */
+.info-contato {
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.info-contato p {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: #ffff00;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato {
+        padding: 50px 5%;
+    }
+
+    .form-contato {
+        max-width: 100%;
+    }
+
+    .social-media a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+footer {
+    background-color: #252525;   /* Alinhado com o restante do site */
+    color: #ffff00;               /* Texto amarelo neon */
+    text-align: center;        
+    padding: 20px 10px;        
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #ffff00;               /* Amarelo neon */
+    text-decoration: none;     
+    margin: 0 5px;              
+}
+
+footer a:hover {
+    color: white;               /* Alterado para um hover em branco */
+    text-decoration: underline; 
+}
+
+
