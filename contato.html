@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CoreTech - Contato</title>
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Barra de Navegação -->
+<nav class="navbar">
+    <div class="logo">CoreTech</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+    </ul>
+</nav>
+
+<!-- Seção de Contato -->
+<section id="contato" class="contato">
+    <div class="contato-container">
+        <h2>Fale Conosco</h2>
+        
+        <!-- Formulário de Contato -->
+        <form action="/enviar-formulario" method="POST" class="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+
+        <!-- Informações de Contato -->
+        <div class="info-contato">
+            <p><strong>Endereço:</strong> Rua Exemplo, 123, Cidade, Estado</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>Email:</strong> contato@coretech.com.br</p>
+
+            <div class="social-media">
+                <a href="https://wa.me/55SEUNUMERO" target="_blank">WhatsApp</a> |
+                <a href="https://instagram.com/SEU_USUARIO" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+    <p>&copy; 2025 Minha Empresa. Todos os direitos reservados.</p>
+    <p>
+        <a href="#privacidade">Política de Privacidade</a> |
+        <a href="#contato">Contato</a>
+    </p>
+</footer>
+
+</body>
+</html>
